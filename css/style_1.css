@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Bevan&display=swap');
+.name{
+    font-family: 'Bevan', serif;
+}
+
+:root {
+    --bs-gradient-light: linear-gradient(to right, #e2e3e5, #d6d8db);
+}
+
+/* Terror y suspenso */
+
+/* Efecto */
+.cuerpo {
+    display: flex; 
+    justify-content: center;
+    text-align: center;
+    padding: 10px; 
+    background-color: #000;
+}
+
+.efect {
+    position: relative;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 30px;
+    overflow: hidden;
+    background: linear-gradient(90deg, #000, #FFF, #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: animate 3s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: -200%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+/*VIDEO */
+@media (max-width: 767px) {
+    .d-md-bloc {
+        display: none;
+        /* Oculta el video en dispositivos más pequeños */
+    }
+}
+
+
+/* Audio PODCAST */
+.audio-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-audio {
+    width: 100%;
+    max-width: 300px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/*API*/
+
+img.img-tthumbnail {
+    width: 80%;
+    height: 80%;
+}
+
+/* C. FICCCION */
+.box-1 {
+    transition: 1s linear;
+}
+
+.box-1:hover {
+    box-shadow: 10px 10px 14px 2px rgba(0, 0, 0, 0.47);
+    padding: 10px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    /* Asegura que la imagen sea un elemento de bloque */
+    margin: 0 auto;
+    /* Centra la imagen horizontalmente */
+}
+
+/* Desactivar efecto en dispositivos con ancho de pantalla menor o igual a 375px */
+@media (max-width: 375px) {
+    img{
+        justify-content: center;
+    }
+    .box-1 {
+        transition: none; 
+    }
+
+    .box-1:hover {
+        box-shadow: none; 
+        padding: 0; 
+    }
+}
